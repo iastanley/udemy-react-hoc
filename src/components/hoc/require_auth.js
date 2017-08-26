@@ -25,5 +25,6 @@ export default function(WrappedComponent) {
     authenticated
   })
 
+  // returning connected version of HOC
   return connect(mapStateToProps)(RequireAuth);
 }
