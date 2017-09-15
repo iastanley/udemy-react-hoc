@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Header from './header';
 import Resources from './resources';
-import requireAuth from './hoc/require_auth';
 
 
 export default class App extends Component {
@@ -10,7 +9,7 @@ export default class App extends Component {
     return (
       <div>
         <Header/>
-        <Route path="/resources" component={requireAuth(Resources)}/>
+        <Route path="/resources" component={Resources}/>
       </div>
     );
   }

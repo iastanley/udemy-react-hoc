@@ -20,11 +20,6 @@ export default function(WrappedComponent) {
       return (<WrappedComponent {...this.props}/>);
     }
   }
-
-  const mapStateToProps = ({ authenticated }) => ({
-    authenticated
-  })
-
-  // returning connected version of HOC
-  return connect(mapStateToProps)(RequireAuth);
+  // don't forget to return your component!
+  return RequireAuth;
 }
